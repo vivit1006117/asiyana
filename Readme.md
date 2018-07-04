@@ -15,5 +15,7 @@ This is a small try to automate things in our apartment.
 ```sh
 $ node --version
 $ yarn install
-$ yarn start
+$ yarn serve
 ```
+
+The browswe would be opened and ready for development.
