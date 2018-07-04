@@ -1,20 +1,23 @@
 import React, { Component } from 'react'; 
 import ReactDOM from 'react-dom';
-import a from './partial';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
+
+import App from './components/App';
+import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
 
 import '../styles/style.scss';
 
 class Main extends Component {
-  constructor() {
-    super();
-    console.log("the value of a is ", a);
-  }
-
   render() {
     return (
-      <div>Hello Everybody</div>
+      <Switch>
+        <Route exact path='/' component={App} />
+        <Route path='/signin' component={SignIn} />
+        <Route path='/signup' component={SignUp} />
+      </Switch>
     );
   }
 }
 
-ReactDOM.render(<Main />, document.getElementById('main'));
+ReactDOM.render(<BrowserRouter><Main /></BrowserRouter>, document.getElementById('main'));
