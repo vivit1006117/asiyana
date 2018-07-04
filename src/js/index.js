@@ -1,24 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import App from './components/App';
-import SignIn from './components/SignIn';
-import SignUp from './components/Register';
-
+import Routes from './routes';
+import { configureStore } from './reduxStore';
 import '../styles/style.scss';
 
-const Main = () => (
-  <Switch>
-    <Route exact path="/" component={App} />
-    <Route path="/signin" component={SignIn} />
-    <Route path="/signup" component={SignUp} />
-  </Switch>
-);
+const store = configureStore();
+
 /* eslint no-undef: 2 */
 ReactDOM.render(
-  <BrowserRouter>
-    <Main />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('main'),
 );
