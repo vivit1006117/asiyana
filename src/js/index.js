@@ -4,7 +4,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import App from './components/App';
 import SignIn from './components/SignIn';
-import SignUp from './components/SignUp';
+import SignUp from './components/Register';
 
 import '../styles/style.scss';
 

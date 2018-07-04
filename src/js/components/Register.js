@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SignUp = () => (
+const Register = () => (
   <div>
     <Link to='/'>Home</Link><br />
     <Link to='/signup'>Sign Up</Link><br />
@@ -11,4 +11,4 @@ const SignUp = () => (
   </div>
 );
 
-export default SignUp;
+export default Register;
