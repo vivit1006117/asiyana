@@ -1,13 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import constants from '../constants';
+
 const SignIn = () => (
   <div>
-  <Link to='/'>Home</Link><br />
-  <Link to='/signup'>Sign Up</Link><br />
-  <Link to='/signin'>Sign In</Link><br />
-  <br />
-  In SignIn component
+    <Link to="/">
+      {constants.home}
+    </Link>
+    <br />
+    <Link to="/signup">
+      {constants.signUp}
+    </Link>
+    <br />
+    <Link to="/signin">
+      {constants.signIn}
+    </Link>
+    <br />
+    <br />
+    In SignIn component
   </div>
 );
 

@@ -12,11 +12,13 @@
     "sass-lint": "sass-lint -c ./.sass-lint.yml -v -q",
     "serve": "webpack-dev-server --open",
     "start": "webpack --mode development --config webpack.config.js",
-    "lint": "jshint .",
+    "lint": "eslint .eslintrc.json src/js/",
+    "lint:fix": "eslint .eslintrc.json src/js/ --fix",
     "validate": "npm ls"
   },
   "pre-commit": [
-    "sass-lint"
+    "sass-lint",
+    "lint"
   ],
   "repository": {
     "type": "git",
@@ -42,6 +44,11 @@
     "babel-preset-stage-2": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "17.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.9.0",
     "precommit-hook": "^3.0.0",
