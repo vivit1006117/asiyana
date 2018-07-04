@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/apna-mohalla/asiyana.svg?branch=master)](https://travis-ci.org/apna-mohalla/asiyana) [![dependencies Status](https://david-dm.org/apna-mohalla/asiyana/status.svg)](https://david-dm.org/apna-mohalla/asiyana) [![devDependencies Status](https://david-dm.org/apna-mohalla/asiyana/dev-status.svg)](https://david-dm.org/apna-mohalla/asiyana?type=dev)
+[![Known Vulnerabilities](https://snyk.io/test/github/apna-mohalla/asiyana/badge.svg)](https://snyk.io/test/github/apna-mohalla/asiyana)
 
 # Apna Maholla
 This is a small try to automate things in our apartment.
