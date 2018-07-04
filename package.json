@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "deploy": "npm run sass-lint && webpack --mode production --config webpack.config.js",
+    "deploy": "webpack --mode production --config webpack.config.js",
     "sass-lint": "sass-lint -c ./.sass-lint.yml -v -q",
     "serve": "webpack-dev-server --open",
     "start": "webpack --mode development --config webpack.config.js",
