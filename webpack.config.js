@@ -1,8 +1,10 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const DEBUG = !process.argv.includes('--development');
+const DEBUG = process.argv.includes('--development');
 
 const config = {
   devtool: DEBUG ? 'eval-source-map' : false,
@@ -14,21 +16,32 @@ const config = {
       exclude: /node_modules/,
       loader: 'babel-loader',
     }, {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-    }]
+      test: /\.scss$/,
+      exclude: /node_modules/,
+      use: [
+        DEBUG ? 'style-loader' : MiniCssExtractPlugin.loader,
+        'css-loader',
+        'sass-loader',
+      ],
+    }],
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'index-[hash].js'
+    filename: 'index-[hash].js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.template.html')
+      template: path.resolve(__dirname, 'src/index.template.html'),
     }),
-    new CleanWebpackPlugin([path.resolve(__dirname, 'build')])
-  ]
+    new CleanWebpackPlugin([path.resolve(__dirname, 'build')]),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: DEBUG ? '[name].css' : '[name].[hash].css',
+      chunkFilename: DEBUG ? '[id].css' : '[id].[hash].css',
+    }),
+    new webpack.SourceMapDevToolPlugin(),
+  ],
 };
 
 module.exports = config;

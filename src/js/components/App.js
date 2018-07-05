@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import constants from '../constants';
+import { labels, paths } from '../constants';
 
 function mapStateToProps(state) {
   return {
@@ -16,20 +16,20 @@ const App = (props) => {
   return (
     <div>
       { language }
-      <Link to="/">
-        {constants.home}
+      <Link to={paths.homePath}>
+        {labels.home}
       </Link>
       <br />
-      <Link to="/signup">
-        {constants.signUp}
+      <Link to={paths.signUpPath}>
+        {labels.signUp}
       </Link>
       <br />
-      <Link to="/signin">
-        {constants.signIn}
+      <Link to={paths.signInPath}>
+        {labels.signIn}
       </Link>
       <br />
       <br />
-    In App component
+      In App component
     </div>
   );
 };
