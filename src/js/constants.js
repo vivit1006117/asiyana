@@ -6,6 +6,9 @@ export const paths = {
   signUpPath: `${baseUrl}signUp`,
 };
 
+/* eslint no-console: 1 */
+console.log(paths);
+
 export const labels = {
   home: 'Home',
   signIn: 'Sign In',
