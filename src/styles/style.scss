@@ -1,9 +1,20 @@
 $body-background: #efefef;
+$banner-background: #31b094;
+
+@import './signin';
 
 html,
 body {
   background: $body-background;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
   height: 100%;
+  line-height: 1.75em;
   margin: 0;
   padding: 0;
+}
+
+.main {
+  display: flex;
+  height: 100%;
 }

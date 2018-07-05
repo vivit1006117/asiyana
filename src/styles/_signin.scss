@@ -1,0 +1,20 @@
+$logo-container-text: #fff;
+
+.signin-container {
+  flex: 1;
+}
+
+.logo-container {
+  align-items: center;
+  background: $banner-background;
+  color: $logo-container-text;
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 25%;
+}
+
+.authentication-form {
+  padding: 10px 30px;
+}
