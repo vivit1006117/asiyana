@@ -9,11 +9,12 @@
   "main": "index.js",
   "scripts": {
     "deploy": "webpack --mode production --config webpack.config.js",
+    "lint:fix": "eslint .eslintrc.json src/js/ --fix",
+    "lint": "eslint .eslintrc.json src/js/",
+    "sass-lint:fix": "sass-lint-auto-fix",
     "sass-lint": "sass-lint -c ./.sass-lint.yml -v -q",
     "serve": "webpack-dev-server --open",
     "start": "webpack --mode development --config webpack.config.js",
-    "lint": "eslint .eslintrc.json src/js/",
-    "lint:fix": "eslint .eslintrc.json src/js/ --fix",
     "validate": "npm ls"
   },
   "pre-commit": [
