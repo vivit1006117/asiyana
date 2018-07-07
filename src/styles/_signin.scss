@@ -9,12 +9,30 @@ $logo-container-text: #fff;
   background: $banner-background;
   color: $logo-container-text;
   display: flex;
-  font-size: 1.5em;
+  flex-direction: column;
+  font-size: 2em;
   font-weight: 700;
   justify-content: center;
   min-height: 25%;
+
+  .icon-home_logo {
+    margin-top: 20px;
+  }
+}
+
+.authentication-form-container {
+  align-items: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 40%);
+  justify-content: center;
+  padding: 10px 50px;
 }
 
 .authentication-form {
-  padding: 10px 30px;
+  max-width: 440px;
+  padding: 30px 0;
+  text-align: center;
+  width: 100%;
 }

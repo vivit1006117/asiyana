@@ -11,4 +11,12 @@ export const labels = {
   signIn: 'Sign In',
   signUp: 'Sign Up',
   bannerText: 'Apna Mohalla',
+  newToMohalla: 'New to mohalla',
+  mohallaDweller: 'Already a mohalla dweller',
+};
+
+export const placeholder = {
+  email: 'EMAIL ADDRESS',
+  password: 'PASSWORD',
+  name: 'NAME',
 };

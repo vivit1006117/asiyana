@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const DEBUG = process.argv.includes('--development');
@@ -41,6 +42,9 @@ const config = {
       chunkFilename: DEBUG ? '[id].css' : '[id].[hash].css',
     }),
     new webpack.SourceMapDevToolPlugin(),
+    new CopyWebpackPlugin([
+      { from: path.resolve(__dirname, 'src/icon-fonts'), to: path.resolve(__dirname, 'build/icon-fonts') },
+    ]),
   ],
 };
 

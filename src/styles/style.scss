@@ -1,7 +1,16 @@
-$body-background: #efefef;
-$banner-background: #31b094;
+$primary-color: #31b094;
 
+$body-background: #efefef;
+$banner-background: $primary-color;
+$white: #fff;
+$muted-text: #7e807f;
+
+@import './icon-fonts';
 @import './signin';
+
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -17,4 +26,33 @@ body {
 .main {
   display: flex;
   height: 100%;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: $primary-color solid 1px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  outline: 0;
+  padding: 10px 0 0;
+  width: 100%;
+}
+
+.button {
+  border-radius: 20px;
+  font-size: 1em;
+  padding: 10px 50px;
+
+  &.primary {
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+.small-font {
+  color: $muted-text;
+  font-size: .8em;
 }
