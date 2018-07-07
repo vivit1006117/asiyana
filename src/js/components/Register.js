@@ -8,10 +8,10 @@ const Register = () => (
   <article className="authentication-container">
     <AuthenticationHeader />
     <section className="authentication-form-container">
-      <h1 className="title">
-        {labels.signUp}
-      </h1>
       <form className="authentication-form form">
+        <h1 className="title">
+          {labels.signUp}
+        </h1>
         <input type="text" placeholder={placeholder.name} required />
         <input type="email" placeholder={placeholder.email} required />
         <input type="password" placeholder={placeholder.password} required />

@@ -8,10 +8,10 @@ const ForgotPassword = () => (
   <article className="authentication-container">
     <AuthenticationHeader />
     <section className="authentication-form-container">
-      <h1 className="title">
-        {labels.forgotPassword}
-      </h1>
       <form className="authentication-form form">
+        <h1 className="title">
+          {labels.forgotPassword}
+        </h1>
         <input type="email" placeholder={placeholder.email} required />
         <input type="tel" placeholder={placeholder.telephone} required />
         <input type="submit" value={labels.retrievePassword} className="button primary" />
