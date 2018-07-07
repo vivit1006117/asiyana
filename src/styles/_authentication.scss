@@ -1,7 +1,8 @@
-$logo-container-text: #fff;
+@import './variable';
+
 $authentication-header-height: 180px;
 
-.signin-container {
+.authentication-container {
   flex: 1;
 }
 
@@ -28,12 +29,11 @@ $authentication-header-height: 180px;
   flex-direction: column;
   height: calc(100% - $authentication-header-height);
   justify-content: flex-start;
-  padding: 10px 50px;
+  padding: 30px 50px;
 }
 
 .authentication-form {
   max-width: 440px;
-  padding: 30px 0;
   text-align: center;
   width: 100%;
 }

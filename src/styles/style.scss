@@ -1,12 +1,6 @@
-$primary-color: #31b094;
-
-$body-background: #efefef;
-$banner-background: $primary-color;
-$white: #fff;
-$muted-text: #7e807f;
-
+@import './variable';
 @import './icon-fonts';
-@import './signin';
+@import './_authentication';
 
 * {
   box-sizing: border-box;
@@ -23,19 +17,35 @@ body {
   padding: 0;
 }
 
+a {
+  color: $primary-color;
+}
+
+.bottom-spacer {
+  margin-bottom: $app-spacer;
+}
+
+.title {
+  border-bottom: $primary-color solid 1px;
+  color: $primary-color;
+  text-align: left;
+  width: 100%;
+}
+
 .main {
   display: flex;
   height: 100%;
 }
 
 input[type='text'],
+input[type='tel'],
 input[type='password'],
 input[type='email'] {
   background-color: transparent;
   border: 0;
   border-bottom: $primary-color solid 1px;
   font-size: 1em;
-  margin-bottom: 20px;
+  margin-bottom: $app-spacer;
   outline: 0;
   padding: 10px 0 0;
   width: 100%;

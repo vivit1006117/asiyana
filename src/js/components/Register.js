@@ -5,9 +5,12 @@ import AuthenticationHeader from './AuthenticationHeader';
 import { labels, paths, placeholder } from '../constants';
 
 const Register = () => (
-  <article className="signin-container">
+  <article className="authentication-container">
     <AuthenticationHeader />
     <section className="authentication-form-container">
+      <h1 className="title">
+        {labels.signUp}
+      </h1>
       <form className="authentication-form form">
         <input type="text" placeholder={placeholder.name} required />
         <input type="email" placeholder={placeholder.email} required />
